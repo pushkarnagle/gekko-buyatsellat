@@ -20,12 +20,14 @@ const stop_loss_pct = 0.95; // stop loss percentage (e.g. 0.95 for 5%)
 const sellat_up = 1.01; // amount of percentage from last buy if market goes up (e.g. 1.01 for 1%)
 ```
 
+Copy the strategy file to /gekko/strategies folder.
+
 Also, you will need to make below changes in `config.js` -
 In `config.tradingAdvisor` module, put `buyatsellat` as method, just like -
 ```
 config.tradingAdvisor = {
 enabled: true, 
-method: 'buyatsellat-pushkar', 
+method: 'buyatsellat', 
 candleSize: 60, 
 historySize: 2,
 ```
