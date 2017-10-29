@@ -3,7 +3,7 @@ Simple strategy to buy and sell assets at pre-defined thresholds with Gekko
 
 This is a simple strategy which I have created in order to work with [Gekko Trading bot](https://github.com/askmike/gekko)
 
-** If you like the strategy, please feel free to donate some BTC to 1M7QRQ79h4ujQMMfbqk72QnXmRdwpyLVXn **
+**If you like the strategy, please feel free to donate some BTC to 1M7QRQ79h4ujQMMfbqk72QnXmRdwpyLVXn**
 
 This strategy can be configured to do below things -
 
@@ -11,6 +11,8 @@ This strategy can be configured to do below things -
 2. It should sell when the price drops below y% of the bought price, i.e. stop loss.
 3. It should buy again if the price surges to z% of the sold price.
 4. It should buy again if the price goes down to u% of the sold price.
+
+**If you want to run Gekko via command line**
 
 You will need to change below 4 variables in `buyatsellat.js` as per your need -
 ```
@@ -35,5 +37,13 @@ You can use any candle size you want. They are in Minutes.
 
 After these changes, you can run Gekko by executing -
 `node gekko --config config.js`
+
+**If you want to run Gekko in UI mode**
+
+Copy `buyatsellat_ui.js` file to /gekko/strategies folder.
+Copy `buyatsellat_ui.toml` file to /gekko/config/strategies folder. (This file is used to change parameters in UI mode)
+
+Run Gekko in UI mode by executing -
+`node gekko --ui`
 
 Do let me know of any issues.
